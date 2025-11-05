@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beni Seviyor musun?</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: pink;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#evet { background-color: red; color: white; }
+#hayir { background-color: gray; color: white; }
+#mesaj { font-size: 28px; margin-top: 30px; display: none; }
+</style>
+</head>
+<body>
+<h1>Zümra 💖 Beni Seviyor musun?</h1>
+<div>
+  <button id="evet">Evet</button>
+  <button id="hayir">Hayır</button>
+</div>
+<p id="mesaj">Ben de seni çok seviyorum Zümram 💞</p>
+
+<script>
+let hayir = document.getElementById("hayir");
+let evet = document.getElementById("evet");
+let mesaj = document.getElementById("mesaj");
+let boyut = 1;
+
+hayir.addEventListener("click", () => {
+  boyut -= 0.2;
+  if (boyut <= 0) {
+    hayir.style.display = "none";
+  } else {
+    hayir.style.transform = `scale(${boyut})`;
+  }
+});
+
+evet.addEventListener("click", () => {
+  evet.style.display = "none";
+  hayir.style.display = "none";
+  mesaj.style.display = "block";
+});
+</script>
+</body>
+</html>
