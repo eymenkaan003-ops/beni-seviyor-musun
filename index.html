@@ -3,23 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beni Seviyor musun?</title>
+<title>Zümra 💖 Beni Seviyor musun?</title>
 <style>
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
   background-color: pink;
-  color: #fff;
+  color: white;
+  text-align: center;
   height: 100vh;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+h1 {
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #ff1493;
+}
 button {
-  font-size: 20px;
-  padding: 10px 20px;
-  margin: 10px;
+  font-size: 22px;
+  padding: 12px 30px;
+  margin: 15px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -27,7 +32,16 @@ button {
 }
 #evet { background-color: red; color: white; }
 #hayir { background-color: gray; color: white; }
-#mesaj { font-size: 28px; margin-top: 30px; display: none; }
+#mesaj {
+  display: none;
+  font-size: 28px;
+  margin-top: 30px;
+  animation: kalp 1s infinite alternate;
+}
+@keyframes kalp {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
 </style>
 </head>
 <body>
